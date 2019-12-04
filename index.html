@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - 20-02</title>
+<style>
+  h1{
+  text-align:center;
+  font-size:32px;
+}
+
+ol{
+  text-align:left;
+  font-size:24px;
+}
+
+div{
+  border:dashed;
+  background:#FFA000;
+}
+
+.odd{
+  background:#FFB000;
+}
+
+.image{
+  background-image: url('http://www.dumpaday.com/wp-content/uploads/2018/09/photos-21-3.jpg')
+}
+
+#addItem{
+  
+}
+</style>
+</head>
+<body translate="no">
+<div>
+<font face="Cambria">
+<h1>Alden's To Do List:
+</h1>
+<ol id="firstList">
+<li class="odd">Sleep</li>
+<li class="even">Eat</li>
+<li class="odd">Homework</li>
+<li class="even">Other Stuff</li>
+<li></li>
+</ol>
+</div>
+<button id="addItem">Add</button>
+<input id="theItem">
+<script id="rendered-js">
+      console.clear();
+
+const addButton = document.getElementById("addItem");
+addButton.addEventListener("click", doClick);
+
+function doClick(e) {
+  const theValue = document.getElementById("theItem").value;
+  console.log(theValue);
+  var node = document.createElement("li");
+  var textnode = document.createTextNode(theValue);
+  node.appendChild(textnode);
+  document.getElementById("firstList").appendChild(node);
+}
+    </script>
+</body>
+</html>
