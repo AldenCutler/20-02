@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +30,17 @@ div{
 }
 
 #addItem{
-  
+  font-size:20px;  
+  background-color: #BBB;
+  padding:16px;
+  border-radius:4px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+#addItem:hover {
+  background-color: #AAA; 
+  color: black;
 }
 </style>
 </head>
@@ -45,11 +54,10 @@ div{
 <li class="even">Eat</li>
 <li class="odd">Homework</li>
 <li class="even">Other Stuff</li>
-<li></li>
 </ol>
 </div>
 <button id="addItem">Add</button>
-<input id="theItem">
+<input id="theItem" size="35">
 <script id="rendered-js">
       console.clear();
 
